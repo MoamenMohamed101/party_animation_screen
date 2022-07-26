@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_animations/simple_animations/controlled_animation.dart';
-import 'package:simple_animations/simple_animations/multi_track_tween.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:simple_animations/simple_animations.dart';
 
 class FadeAnimation extends StatelessWidget {
   final double delay;

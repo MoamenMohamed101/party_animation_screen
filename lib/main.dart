@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:party_screen/fadeAnimation.dart';
+import 'package:party_screen/findEvent.dart';
 
 main() {
   runApp(
@@ -34,7 +36,16 @@ class _HomePageState extends State<HomePage>
       end: 30,
     ).animate(animationController!)
       ..addStatusListener((status) {
-        if (status == AnimationStatus.completed) {}
+        if (status == AnimationStatus.completed) {
+          Navigator.push(
+            context,
+            PageTransition(
+              child: const FindEvent(),
+              type: PageTransitionType.leftToRight,
+              duration: const Duration(milliseconds: 500),
+            ),
+          );
+        }
       });
     super.initState();
   }
